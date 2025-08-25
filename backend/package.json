@@ -17,7 +17,9 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "sonar:docker": "docker run --rm -e SONAR_HOST_URL='http://host.docker.internal:9000' -e SONAR_TOKEN='sqp_8e94874c50e5c5b5d6418bd6c43d312305985a51' nest-sonar"
+
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
